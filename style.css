@@ -1,6 +1,13 @@
-body{
+body {
     background-color: #252627 !important;
 }
+.font-slabo {
+    font-family: slabo !important;
+}
+.font-oswald {
+    font-family: oswald !important;
+}
+
 header {
     width: 100%;
     height: 100vh;
@@ -107,3 +114,117 @@ nav ul li a {
     }
 
 }
+
+.schooltitle {
+    font-size: 55px;
+    font-family: Oswald;
+}
+
+.classtitle {
+    font-size: 50px;
+    font-family: Slabo;
+}
+
+/* Header Button Hover */
+.glow-on-hover {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #4472CA, #4472CA, #4472CA, #4472CA, #F2E94E, #F2E94E, #F2E94E, #F2E94E);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+/* Header Button Hover END */
+
+/* Events Card */
+
+/* Event Card END */
+/* Teacher Contact Card */
+.testimonial-card .card-up {
+    height: 120px;
+    overflow: hidden;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+}
+
+.aqua-gradient {
+    background: linear-gradient(40deg, #0088ff, #ffff, #d0ff00) !important;
+}
+
+.testimonial-card .avatar {
+    width: 120px;
+    margin-top: -60px;
+    overflow: hidden;
+    border: 5px solid #fff;
+    border-radius: 50%;
+}
+/* Teacher Contact Card END */
+/* Class Officer Card*/
+
+.classofficer-card .avatar {
+    width: 120px;
+    margin-top: auto;
+    overflow: hidden;
+    border: 5px solid #fff;
+    border-radius: 50%;
+}
+/* Class Officer END*/
