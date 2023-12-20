@@ -234,3 +234,6 @@ nav ul li a {
     border-radius: 50%;
 }
 /* Class Officer END*/
+.logo-width {
+    max-width: 1000px;
+}
